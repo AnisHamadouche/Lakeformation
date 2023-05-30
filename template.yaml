@@ -1,0 +1,1538 @@
+Description: CloudFormation template to create AWS Lake Formation workshop resources
+Metadata:
+  'AWS::CloudFormation::Interface':
+    ParameterGroups:
+      - Label:
+          default: Database Configuration
+        Parameters:
+          - TPCDBName
+          - DBMasterUser
+          - DBMasterPassword
+      - Label:
+          default: Misc Configuration
+        Parameters:
+          - EEKeyPair
+          - LatestAmiId
+    ParameterLabels:
+      TPCDBName:
+        default: Database Name
+      DBMasterUser:
+        default: Master Username
+      DBMasterPassword:
+        default: Master User Password
+      EEKeyPair:
+        default: EC2 Key Pair
+      LatestAmiId:
+        default: Latest AMI Id
+  'AWS::CloudFormation::Designer':
+    9baee89a-4b38-49c1-96f1-4d39b437f887:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 60
+        'y': 690
+      z: 1
+      embeds: []
+    b87ab17f-9b53-4982-b2a1-18292c183dd8:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 180
+        'y': 690
+      z: 1
+      embeds: []
+    13fa96d9-9db5-4a2d-96c5-0470201896f0:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 300
+        'y': 690
+      z: 1
+      embeds: []
+    e081333d-86c3-4f2f-ab60-c934404b3e8d:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 420
+        'y': 690
+      z: 1
+      embeds: []
+    65023877-ecd7-432d-a2c1-869cd94e8552:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 540
+        'y': 690
+      z: 1
+      embeds: []
+    34003d4f-2970-41a9-ad17-188399b72fb6:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 660
+        'y': 690
+      z: 1
+      embeds: []
+    aeb9f624-371d-4af5-abb8-155450eb36f2:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 780
+        'y': 690
+      z: 1
+      embeds: []
+    5d0d643a-e2c9-4d07-8ee7-f4c3d0e65f65:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 60
+        'y': 810
+      z: 1
+      embeds: []
+    60efec10-b784-4ea9-b503-54bf82691aa8:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 180
+        'y': 810
+      z: 1
+      embeds: []
+    afa74320-cc45-4db9-b0ed-d7e633239a92:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 300
+        'y': 810
+      z: 1
+      embeds: []
+    f0b23bb2-bcf4-4754-b3f6-664c7324b258:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 420
+        'y': 810
+      z: 1
+      embeds: []
+    c8f232b5-ba23-4120-b526-ea96e77151a5:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 540
+        'y': 810
+      z: 1
+      embeds: []
+    790908a3-8c69-4f2d-a5bd-f487c8916190:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 660
+        'y': 810
+      z: 1
+      embeds: []
+    82efd40f-4751-4008-8d7b-bddf8ce39935:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 780
+        'y': 810
+      z: 1
+      embeds: []
+    b9fd35eb-7405-481a-b8fd-32340b1c6f1c:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 900
+        'y': 690
+      z: 1
+      embeds: []
+    48e12664-7f17-4b4a-85e2-d342f24db7ea:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 900
+        'y': 810
+      z: 1
+      embeds: []
+    12eeb84b-9585-44b6-82fe-eb105d7bc1f1:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 60
+        'y': 930
+      z: 1
+      embeds: []
+    aae41409-b7e3-4eab-9cd2-0638d25d75bf:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 180
+        'y': 930
+      z: 1
+      embeds: []
+    53b87acc-b76a-4397-a4c6-d46daf0ce2db:
+      size:
+        width: 330
+        height: 240
+      position:
+        x: 60
+        'y': 90
+      z: 1
+      embeds:
+        - 4cca1e12-dd91-44c7-8d4b-60596dd7de07
+        - 7c81b63b-bac4-4dab-b44f-6ff742cfd7f8
+    4cca1e12-dd91-44c7-8d4b-60596dd7de07:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 90
+        'y': 150
+      z: 2
+      parent: 53b87acc-b76a-4397-a4c6-d46daf0ce2db
+      embeds: []
+      iscontainedinside:
+        - 53b87acc-b76a-4397-a4c6-d46daf0ce2db
+        - 53b87acc-b76a-4397-a4c6-d46daf0ce2db
+    7c81b63b-bac4-4dab-b44f-6ff742cfd7f8:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 210
+        'y': 150
+      z: 2
+      parent: 53b87acc-b76a-4397-a4c6-d46daf0ce2db
+      embeds: []
+      iscontainedinside:
+        - 53b87acc-b76a-4397-a4c6-d46daf0ce2db
+        - 53b87acc-b76a-4397-a4c6-d46daf0ce2db
+    65f141e4-661d-4319-a891-3c5be2ee9eb9:
+      source:
+        id: 7c81b63b-bac4-4dab-b44f-6ff742cfd7f8
+      target:
+        id: 4cca1e12-dd91-44c7-8d4b-60596dd7de07
+      z: 2
+    9e9ffa66-1b3e-4dd7-b44a-03e51ed00f0f:
+      source:
+        id: 7c81b63b-bac4-4dab-b44f-6ff742cfd7f8
+      target:
+        id: 7c81b63b-bac4-4dab-b44f-6ff742cfd7f8
+      z: 2
+    f843f37b-66ff-4b09-8a8b-fd150073946a:
+      size:
+        width: 240
+        height: 240
+      position:
+        x: 660
+        'y': 390
+      z: 1
+      embeds:
+        - 05086fd3-0f57-4755-bfcb-9cdd32cc4d9f
+    e1f4a70f-0f0d-43bf-8958-0d1205b12c4f:
+      size:
+        width: 240
+        height: 240
+      position:
+        x: 450
+        'y': 90
+      z: 1
+      embeds:
+        - feb14aca-9f7c-4786-96b7-81b332b7c4be
+    3b5e8fed-ec7b-4ff5-8d69-00fa1e22ef6e:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 300
+        'y': 930
+      z: 1
+      embeds: []
+    54fce847-ce16-4f6d-a11e-ba955a6616a7:
+      source:
+        id: 53b87acc-b76a-4397-a4c6-d46daf0ce2db
+      target:
+        id: aae41409-b7e3-4eab-9cd2-0638d25d75bf
+      z: 1
+    0b6a6b2b-245b-4dfc-9d66-7741e2f7dbb4:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 420
+        'y': 930
+      z: 1
+      embeds: []
+      dependson:
+        - 54fce847-ce16-4f6d-a11e-ba955a6616a7
+    feb14aca-9f7c-4786-96b7-81b332b7c4be:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 480
+        'y': 150
+      z: 2
+      parent: e1f4a70f-0f0d-43bf-8958-0d1205b12c4f
+      embeds: []
+      isassociatedwith:
+        - aae41409-b7e3-4eab-9cd2-0638d25d75bf
+      iscontainedinside:
+        - e1f4a70f-0f0d-43bf-8958-0d1205b12c4f
+        - e1f4a70f-0f0d-43bf-8958-0d1205b12c4f
+      dependson:
+        - 54fce847-ce16-4f6d-a11e-ba955a6616a7
+    832a9b6c-c9be-4d35-846e-5039662ebf25:
+      size:
+        width: 150
+        height: 150
+      position:
+        x: 750
+        'y': 90
+      z: 1
+      embeds: []
+    e3b80635-8879-4d3e-ac1d-fa2c702e28a5:
+      size:
+        width: 240
+        height: 240
+      position:
+        x: 360
+        'y': 390
+      z: 1
+      embeds:
+        - ec91adb3-0b14-4335-a4ce-9521cb522c74
+    ec91adb3-0b14-4335-a4ce-9521cb522c74:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 390
+        'y': 450
+      z: 2
+      parent: e3b80635-8879-4d3e-ac1d-fa2c702e28a5
+      embeds: []
+      iscontainedinside:
+        - e3b80635-8879-4d3e-ac1d-fa2c702e28a5
+        - e3b80635-8879-4d3e-ac1d-fa2c702e28a5
+    c26fca54-703c-403f-9e75-fe35f04d4a49:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 540
+        'y': 930
+      z: 1
+      embeds: []
+    05086fd3-0f57-4755-bfcb-9cdd32cc4d9f:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 690
+        'y': 450
+      z: 2
+      parent: f843f37b-66ff-4b09-8a8b-fd150073946a
+      embeds: []
+      isassociatedwith:
+        - c26fca54-703c-403f-9e75-fe35f04d4a49
+      iscontainedinside:
+        - f843f37b-66ff-4b09-8a8b-fd150073946a
+        - f843f37b-66ff-4b09-8a8b-fd150073946a
+    d6be8ee8-996c-4be3-8f49-12a483fce444:
+      size:
+        width: 240
+        height: 240
+      position:
+        x: 70
+        'y': 400
+      z: 1
+      embeds:
+        - 2fc46e0c-f7bc-4d81-925f-6b3b46977c08
+    1e25cd49-f96e-4e9c-af61-f9f7ed4db309:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 660
+        'y': 930
+      z: 1
+      embeds: []
+    ad353aef-c268-4ca9-824f-c70d169639b3:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 780
+        'y': 930
+      z: 1
+      embeds: []
+    df1fd7c6-a097-4288-8777-6b4b51256d4c:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 900
+        'y': 930
+      z: 1
+      embeds: []
+    044ec220-03fe-47a9-aa0e-3ca28f0e81a1:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 960
+        'y': 90
+      z: 1
+      embeds: []
+    df641406-8b9f-4e68-b479-0abcec8ca894:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 960
+        'y': 210
+      z: 1
+      embeds: []
+    db69fc15-6914-4211-b88c-37488003b356:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 960
+        'y': 330
+      z: 1
+      embeds: []
+    38ac701e-e209-4da1-9821-0a0fb8e9f97c:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 960
+        'y': 450
+      z: 1
+      embeds: []
+    2fc46e0c-f7bc-4d81-925f-6b3b46977c08:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 100
+        'y': 460
+      z: 2
+      parent: d6be8ee8-996c-4be3-8f49-12a483fce444
+      embeds: []
+      iscontainedinside:
+        - d6be8ee8-996c-4be3-8f49-12a483fce444
+        - d6be8ee8-996c-4be3-8f49-12a483fce444
+      dependson:
+        - 9baee89a-4b38-49c1-96f1-4d39b437f887
+Mappings:
+  SubnetConfig:
+    VPC:
+      CIDR: 10.0.0.0/16
+    PublicOne:
+      CIDR: 10.0.0.0/24
+    PublicTwo:
+      CIDR: 10.0.1.0/24
+    Private:
+      CIDR: 10.0.2.0/24
+  Constants:
+    EC2InstanceType:
+      Name: t2.small
+    AutoHibernateTimeout:
+      Name: 30
+Parameters:
+  TPCDBName:
+    Type: String
+    Default: tpc
+    AllowedValues:
+      - tpc
+    Description: Name of the database that will be created.
+  DBMasterUser:
+    Type: String
+    Default: tpcadmin
+    Description: Master username for TPC database.
+  DBMasterPassword:
+    Type: String
+    Default: BigData26!
+    Description: Master password for TPC database.
+  EEKeyPair:
+    Description: Amazon EC2 Key Pair
+    Type: 'AWS::EC2::KeyPair::KeyName'
+    MinLength: 1
+  LatestAmiId:
+    Type: 'AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>'
+    Default: /aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2
+    AllowedValues:
+      - /aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2
+    Description: Image ID for the EC2 helper instance. DO NOT change this.
+Resources:
+  LakeFormationVPC:
+    Type: 'AWS::EC2::VPC'
+    Properties:
+      CidrBlock: !FindInMap 
+        - SubnetConfig
+        - VPC
+        - CIDR
+      InstanceTenancy: default
+      EnableDnsSupport: 'true'
+      EnableDnsHostnames: 'true'
+      Tags:
+        - Key: Name
+          Value: LF-Workshop-VPC
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 53b87acc-b76a-4397-a4c6-d46daf0ce2db
+  PrivateSubnet:
+    Type: 'AWS::EC2::Subnet'
+    Properties:
+      CidrBlock: !FindInMap 
+        - SubnetConfig
+        - Private
+        - CIDR
+      MapPublicIpOnLaunch: 'true'
+      AvailabilityZone: !Select 
+        - 1
+        - !GetAZs 
+          Ref: 'AWS::Region'
+      VpcId: !Ref LakeFormationVPC
+      Tags:
+        - Key: Name
+          Value: LF-Workshop-PrivateSubnet
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: d6be8ee8-996c-4be3-8f49-12a483fce444
+  PublicSubnetOne:
+    Type: 'AWS::EC2::Subnet'
+    Properties:
+      CidrBlock: !FindInMap 
+        - SubnetConfig
+        - PublicOne
+        - CIDR
+      MapPublicIpOnLaunch: 'true'
+      AvailabilityZone: !Select 
+        - 0
+        - !GetAZs 
+          Ref: 'AWS::Region'
+      VpcId: !Ref LakeFormationVPC
+      Tags:
+        - Key: Name
+          Value: LF-Workshop-PublicSubnetOne
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: e3b80635-8879-4d3e-ac1d-fa2c702e28a5
+  PublicSubnetTwo:
+    Type: 'AWS::EC2::Subnet'
+    Properties:
+      CidrBlock: !FindInMap 
+        - SubnetConfig
+        - PublicTwo
+        - CIDR
+      MapPublicIpOnLaunch: 'true'
+      AvailabilityZone: !Select 
+        - 1
+        - !GetAZs 
+          Ref: 'AWS::Region'
+      VpcId: !Ref LakeFormationVPC
+      Tags:
+        - Key: Name
+          Value: LF-Workshop-PublicSubnetTwo
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 832a9b6c-c9be-4d35-846e-5039662ebf25
+  InternetGateway:
+    Type: 'AWS::EC2::InternetGateway'
+    Properties:
+      Tags:
+        - Key: Name
+          Value: LF-Workshop-IG
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: aae41409-b7e3-4eab-9cd2-0638d25d75bf
+  VPCGatewayAttachment:
+    Type: 'AWS::EC2::VPCGatewayAttachment'
+    Properties:
+      VpcId: !Ref LakeFormationVPC
+      InternetGatewayId: !Ref InternetGateway
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 54fce847-ce16-4f6d-a11e-ba955a6616a7
+  InternetGatewayRouteTable:
+    Type: 'AWS::EC2::RouteTable'
+    Properties:
+      VpcId: !Ref LakeFormationVPC
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: e1f4a70f-0f0d-43bf-8958-0d1205b12c4f
+  InternetGatewayRoute:
+    Type: 'AWS::EC2::Route'
+    DependsOn: VPCGatewayAttachment
+    Properties:
+      DestinationCidrBlock: 0.0.0.0/0
+      RouteTableId: !Ref InternetGatewayRouteTable
+      GatewayId: !Ref InternetGateway
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: feb14aca-9f7c-4786-96b7-81b332b7c4be
+  PublicSubnetOneRouteTableAssociation:
+    Type: 'AWS::EC2::SubnetRouteTableAssociation'
+    Properties:
+      RouteTableId: !Ref InternetGatewayRouteTable
+      SubnetId: !Ref PublicSubnetOne
+  PublicSubnetTwoRouteTableAssociation:
+    Type: 'AWS::EC2::SubnetRouteTableAssociation'
+    Properties:
+      RouteTableId: !Ref InternetGatewayRouteTable
+      SubnetId: !Ref PublicSubnetTwo
+  NATGatewayAttachment:
+    Type: 'AWS::EC2::EIP'
+    DependsOn: VPCGatewayAttachment
+    Properties:
+      Domain: vpc
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 0b6a6b2b-245b-4dfc-9d66-7741e2f7dbb4
+  NATGateway:
+    Type: 'AWS::EC2::NatGateway'
+    Properties:
+      SubnetId: !Ref PublicSubnetOne
+      AllocationId: !GetAtt 
+        - NATGatewayAttachment
+        - AllocationId
+      Tags:
+        - Key: Name
+          Value: LF-NAT-Gateway
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: c26fca54-703c-403f-9e75-fe35f04d4a49
+  NATGatewayRouteTable:
+    Type: 'AWS::EC2::RouteTable'
+    Properties:
+      VpcId: !Ref LakeFormationVPC
+      Tags:
+        - Key: Name
+          Value: LF-NAT-RouteTable
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: f843f37b-66ff-4b09-8a8b-fd150073946a
+  NATGatewayRoute:
+    Type: 'AWS::EC2::Route'
+    Properties:
+      DestinationCidrBlock: 0.0.0.0/0
+      RouteTableId: !Ref NATGatewayRouteTable
+      NatGatewayId: !Ref NATGateway
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 05086fd3-0f57-4755-bfcb-9cdd32cc4d9f
+  PrivateSubnetRouteTableAssociation:
+    Type: 'AWS::EC2::SubnetRouteTableAssociation'
+    Properties:
+      RouteTableId: !Ref NATGatewayRouteTable
+      SubnetId: !Ref PrivateSubnet
+  S3Endpoint:
+    Type: 'AWS::EC2::VPCEndpoint'
+    Properties:
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Action: '*'
+            Principal: '*'
+            Resource: '*'
+      RouteTableIds:
+        - !Ref NATGatewayRouteTable
+        - !Ref InternetGatewayRouteTable
+      ServiceName: !Sub 'com.amazonaws.${AWS::Region}.s3'
+      VpcId: !Ref LakeFormationVPC
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 3b5e8fed-ec7b-4ff5-8d69-00fa1e22ef6e
+  GlueServiceRole:
+    Type: 'AWS::IAM::Role'
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - glue.amazonaws.com
+                - lakeformation.amazonaws.com
+                - firehose.amazonaws.com
+            Action: 'sts:AssumeRole'
+      ManagedPolicyArns:
+        - 'arn:aws:iam::aws:policy/service-role/AWSGlueServiceRole'
+        - 'arn:aws:iam::aws:policy/AmazonKinesisFullAccess'
+      Policies:
+        - PolicyName: LF-Data-Lake-Storage-Policy
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - 's3:*'
+                Resource:
+                  - !Join 
+                    - ''
+                    - - 'arn:aws:s3:::'
+                      - !Ref DataLakeBucket
+                      - /*
+                  - !Join 
+                    - ''
+                    - - 'arn:aws:s3:::'
+                      - !Ref DataLakeBucket
+        - PolicyName: Glue-Demo-Access-Policy
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - 's3:*'
+                Resource:
+                  - !Join 
+                    - ''
+                    - - 'arn:aws:s3:::'
+                      - !Ref LFWorkshopBucket
+                      - /*
+                  - !Join 
+                    - ''
+                    - - 'arn:aws:s3:::'
+                      - !Ref LFWorkshopBucket
+        - PolicyName: LF-DataAccess-Policy
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - 'lakeformation:GetDataAccess'
+                  - 'lakeformation:GrantPermissions'
+                Resource: '*'
+        - PolicyName: LF-Workflow-Policy
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - 'iam:PassRole'
+                Resource:
+                  - !Join 
+                    - ''
+                    - - 'arn:aws:iam::'
+                      - !Ref 'AWS::AccountId'
+                      - ':role/LF-GlueServiceRole'
+                  - !Join 
+                    - ''
+                    - - 'arn:aws:iam::'
+                      - !Ref 'AWS::AccountId'
+                      - ':role/LakeFormationWorkflowRole'
+      RoleName: LF-GlueServiceRole
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 48e12664-7f17-4b4a-85e2-d342f24db7ea
+  DataAnalystGlueServiceRole:
+    Type: 'AWS::IAM::Role'
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - glue.amazonaws.com
+                - lakeformation.amazonaws.com
+                - firehose.amazonaws.com
+            Action: 'sts:AssumeRole'
+      ManagedPolicyArns:
+        - 'arn:aws:iam::aws:policy/service-role/AWSGlueServiceRole'
+        - 'arn:aws:iam::aws:policy/AmazonKinesisFullAccess'
+      Policies:
+        - PolicyName: DA-Data-Lake-Storage-Policy
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - 's3:*'
+                Resource:
+                  - !Join 
+                    - ''
+                    - - 'arn:aws:s3:::'
+                      - !Ref DataLakeBucket
+                      - /*
+                  - !Join 
+                    - ''
+                    - - 'arn:aws:s3:::'
+                      - !Ref DataLakeBucket
+        - PolicyName: DA-Glue-Access-Policy
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - 's3:*'
+                Resource:
+                  - !Join 
+                    - ''
+                    - - 'arn:aws:s3:::'
+                      - !Ref LFWorkshopBucket
+                      - /*
+                  - !Join 
+                    - ''
+                    - - 'arn:aws:s3:::'
+                      - !Ref LFWorkshopBucket
+        - PolicyName: DA-DataAccess-Policy
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - 'lakeformation:GetDataAccess'
+                  - 'lakeformation:GrantPermissions'
+                Resource: '*'
+        - PolicyName: DA-Workflow-Policy
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - 'iam:PassRole'
+                Resource:
+                  - !Join 
+                    - ''
+                    - - 'arn:aws:iam::'
+                      - !Ref 'AWS::AccountId'
+                      - ':role/DA-GlueServiceRole'
+                  - !Join 
+                    - ''
+                    - - 'arn:aws:iam::'
+                      - !Ref 'AWS::AccountId'
+                      - ':role/LakeFormationWorkflowRole'
+      RoleName: DA-GlueServiceRole
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: b9fd35eb-7405-481a-b8fd-32340b1c6f1c
+  DataEngineerGlueServiceRole:
+    Type: 'AWS::IAM::Role'
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - glue.amazonaws.com
+                - lakeformation.amazonaws.com
+                - firehose.amazonaws.com
+            Action: 'sts:AssumeRole'
+      ManagedPolicyArns:
+        - 'arn:aws:iam::aws:policy/service-role/AWSGlueServiceRole'
+        - 'arn:aws:iam::aws:policy/AmazonKinesisFullAccess'
+      Policies:
+        - PolicyName: DE-Data-Lake-Storage-Policy
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - 's3:*'
+                Resource:
+                  - !Join 
+                    - ''
+                    - - 'arn:aws:s3:::'
+                      - !Ref DataLakeBucket
+                      - /*
+                  - !Join 
+                    - ''
+                    - - 'arn:aws:s3:::'
+                      - !Ref DataLakeBucket
+        - PolicyName: DE-Glue-Access-Policy
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - 's3:*'
+                Resource:
+                  - !Join 
+                    - ''
+                    - - 'arn:aws:s3:::'
+                      - !Ref LFWorkshopBucket
+                      - /*
+                  - !Join 
+                    - ''
+                    - - 'arn:aws:s3:::'
+                      - !Ref LFWorkshopBucket
+        - PolicyName: DE-DataAccess-Policy
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - 'lakeformation:GetDataAccess'
+                  - 'lakeformation:GrantPermissions'
+                Resource: '*'
+        - PolicyName: DA-Workflow-Policy
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - 'iam:PassRole'
+                Resource:
+                  - !Join 
+                    - ''
+                    - - 'arn:aws:iam::'
+                      - !Ref 'AWS::AccountId'
+                      - ':role/DE-GlueServiceRole'
+                  - !Join 
+                    - ''
+                    - - 'arn:aws:iam::'
+                      - !Ref 'AWS::AccountId'
+                      - ':role/LakeFormationWorkflowRole'
+      RoleName: DE-GlueServiceRole
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 82efd40f-4751-4008-8d7b-bddf8ce39935
+  AmazonKinesisFirehoseFullAccess:
+    Type: 'AWS::IAM::Role'
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - firehose.amazonaws.com
+            Action: 'sts:AssumeRole'
+      ManagedPolicyArns:
+        - 'arn:aws:iam::aws:policy/AmazonKinesisFirehoseFullAccess'
+      Policies:
+        - PolicyName: LF-Stream-Data-Storage-Policy
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - 's3:*'
+                Resource:
+                  - !Join 
+                    - ''
+                    - - 'arn:aws:s3:::'
+                      - !Ref DataLakeBucket
+                      - /*
+                  - !Join 
+                    - ''
+                    - - 'arn:aws:s3:::'
+                      - !Ref DataLakeBucket
+      RoleName: LF-KinesisServiceRole
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 790908a3-8c69-4f2d-a5bd-f487c8916190
+  DataLakeBucket:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      BucketName: !Join 
+        - '-'
+        - - lf-data-lake
+          - !Ref 'AWS::AccountId'
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: c8f232b5-ba23-4120-b526-ea96e77151a5
+  LFWorkshopBucket:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      BucketName: !Join 
+        - '-'
+        - - lf-workshop
+          - !Ref 'AWS::AccountId'
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 5d0d643a-e2c9-4d07-8ee7-f4c3d0e65f65
+  LFUsersPassword:
+    Type: 'AWS::SecretsManager::Secret'
+    Properties:
+      Description: Secret password for all workshop users
+      Name: !Sub '${AWS::StackName}-lf-users-credentials'
+      GenerateSecretString:
+        SecretStringTemplate: '{"username":"all-lf-users"}'
+        GenerateStringKey: password
+        PasswordLength: 16
+        ExcludeCharacters: '"@/\'
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: aeb9f624-371d-4af5-abb8-155450eb36f2
+  ADFSUsersPassword:
+    Type: 'AWS::SecretsManager::Secret'
+    Properties:
+      Description: Secret password for all ADFS users
+      Name: !Sub '${AWS::StackName}-adfs-users-credentials'
+      SecretString: '{"username":"all-windows-users","password":"Password1!"}'
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 34003d4f-2970-41a9-ad17-188399b72fb6
+  DataAdminUser:
+    Type: 'AWS::IAM::User'
+    Properties:
+      Path: /
+      LoginProfile:
+        Password: !Sub '{{resolve:secretsmanager:${LFUsersPassword}::password}}'
+        PasswordResetRequired: false
+      Policies:
+        - PolicyName: LF-DataLake-Admin-Policy
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action: 'iam:CreateServiceLinkedRole'
+                Resource: '*'
+                Condition:
+                  StringEquals:
+                    'iam:AWSServiceName': lakeformation.amazonaws.com
+              - Effect: Allow
+                Action:
+                  - 'iam:PutRolePolicy'
+                Resource: !Join 
+                  - ''
+                  - - 'arn:aws:iam::'
+                    - !Ref 'AWS::AccountId'
+                    - >-
+                      :role/aws-service-role/lakeformation.amazonaws.com/AWSServiceRoleForLakeFormationDataAccess
+              - Effect: Allow
+                Action: 'iam:PassRole'
+                Resource:
+                  - 'arn:aws:iam::*:role/LF-GlueServiceRole'
+        - PolicyName: LF-DataLake-Admin-RAM-Invitation-Policy
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - 'ram:AcceptResourceShareInvitation'
+                  - 'ram:RejectResourceShareInvitation'
+                  - 'ec2:DescribeAvailabilityZones'
+                  - 'ram:EnableSharingWithAwsOrganization'
+                Resource: '*'
+      ManagedPolicyArns:
+        - 'arn:aws:iam::aws:policy/AWSLakeFormationDataAdmin'
+        - 'arn:aws:iam::aws:policy/AWSGlueConsoleFullAccess'
+        - 'arn:aws:iam::aws:policy/AWSLakeFormationCrossAccountManager'
+      UserName: lf-data-admin
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 65023877-ecd7-432d-a2c1-869cd94e8552
+  DataScientistUser:
+    Type: 'AWS::IAM::User'
+    Properties:
+      Path: /
+      LoginProfile:
+        Password: !Sub '{{resolve:secretsmanager:${LFUsersPassword}::password}}'
+        PasswordResetRequired: false
+      Policies:
+        - PolicyName: LF-Athena-Query-Result-Policy
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - 's3:Put*'
+                  - 's3:Get*'
+                  - 's3:List*'
+                Resource:
+                  - !Join 
+                    - ''
+                    - - 'arn:aws:s3:::'
+                      - !Ref LFWorkshopBucket
+                      - /athena-results/*
+        - PolicyName: LF-Cell-Level-Filter-Policy
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - 'lakeformation:StartQueryPlanning'
+                  - 'lakeformation:GetQueryState'
+                  - 'lakeformation:GetWorkUnits'
+                  - 'lakeformation:GetWorkUnitResults'
+                Resource: '*'
+      ManagedPolicyArns:
+        - 'arn:aws:iam::aws:policy/AmazonAthenaFullAccess'
+        - 'arn:aws:iam::aws:policy/AmazonSageMakerFullAccess'
+      UserName: lf-data-scientist
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: f0b23bb2-bcf4-4754-b3f6-664c7324b258
+  DataAnalystUser:
+    Type: 'AWS::IAM::User'
+    Properties:
+      Path: /
+      LoginProfile:
+        Password: !Sub '{{resolve:secretsmanager:${LFUsersPassword}::password}}'
+        PasswordResetRequired: false
+      Policies:
+        - PolicyName: LF-Athena-Query-Result-Policy
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - 's3:Put*'
+                  - 's3:Get*'
+                  - 's3:List*'
+                Resource:
+                  - !Join 
+                    - ''
+                    - - 'arn:aws:s3:::'
+                      - !Ref LFWorkshopBucket
+                      - /athena-results/*
+        - PolicyName: LF-PassRole
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action: 'iam:PassRole'
+                Resource:
+                  - 'arn:aws:iam::*:role/DA-GlueServiceRole'
+      ManagedPolicyArns:
+        - 'arn:aws:iam::aws:policy/AmazonAthenaFullAccess'
+        - 'arn:aws:iam::aws:policy/AWSGlueConsoleFullAccess'
+        - 'arn:aws:iam::aws:policy/AmazonRedshiftDataFullAccess'
+        - 'arn:aws:iam::aws:policy/AmazonRedshiftFullAccess'
+        - 'arn:aws:iam::aws:policy/AmazonRedshiftQueryEditorV2FullAccess'
+      UserName: lf-data-analyst
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: afa74320-cc45-4db9-b0ed-d7e633239a92
+  DataEngineerUser:
+    Type: 'AWS::IAM::User'
+    Properties:
+      Path: /
+      LoginProfile:
+        Password: !Sub '{{resolve:secretsmanager:${LFUsersPassword}::password}}'
+        PasswordResetRequired: false
+      Policies:
+        - PolicyName: LF-Athena-Query-Result-Policy
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - 's3:Put*'
+                  - 's3:Get*'
+                  - 's3:List*'
+                Resource:
+                  - !Join 
+                    - ''
+                    - - 'arn:aws:s3:::'
+                      - !Ref LFWorkshopBucket
+                      - /athena-results/*
+        - PolicyName: LF-PassRole
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action: 'iam:PassRole'
+                Resource:
+                  - 'arn:aws:iam::*:role/DE-GlueServiceRole'
+      ManagedPolicyArns:
+        - 'arn:aws:iam::aws:policy/AmazonAthenaFullAccess'
+        - 'arn:aws:iam::aws:policy/AWSGlueConsoleFullAccess'
+      UserName: lf-data-engineer
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 60efec10-b784-4ea9-b503-54bf82691aa8
+  EC2Role:
+    Type: 'AWS::IAM::Role'
+    Properties:
+      Path: /
+      RoleName: EC2Role
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - ec2.amazonaws.com
+            Action: 'sts:AssumeRole'
+      ManagedPolicyArns:
+        - 'arn:aws:iam::aws:policy/AdministratorAccess'
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 13fa96d9-9db5-4a2d-96c5-0470201896f0
+  EC2InstanceProfile:
+    Type: 'AWS::IAM::InstanceProfile'
+    Properties:
+      Path: /
+      Roles:
+        - !Ref EC2Role
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: e081333d-86c3-4f2f-ab60-c934404b3e8d
+  BackUpRestoreInstance:
+    Type: 'AWS::EC2::Instance'
+    Properties:
+      InstanceType: t2.small
+      ImageId: !Ref LatestAmiId
+      KeyName: !Ref EEKeyPair
+      IamInstanceProfile: !Ref EC2InstanceProfile
+      NetworkInterfaces:
+        - AssociatePublicIpAddress: 'true'
+          DeviceIndex: '0'
+          SubnetId: !Ref PublicSubnetOne
+      UserData: !Base64 
+        'Fn::Join':
+          - ''
+          - - |
+              #!/bin/bash -ex
+            - |
+              sudo yum -y install mysql
+            - >
+              aws s3 cp
+              s3://aws-data-analytics-workshops/shared_datasets/tpcparquet/
+              /tmp/tpcparquet/ --recursive
+            - 'aws s3 cp /tmp/tpcparquet/ s3://'
+            - !Ref DataLakeBucket
+            - |
+              /tpcparquet/ --recursive
+            - |+
+
+            - >
+              aws s3 cp
+              s3://aws-data-analytics-workshops/lake-formation-workshop/sampledata/tripdata.csv
+              /tmp/
+            - 'aws s3 cp /tmp/tripdata.csv s3://'
+            - !Ref LFWorkshopBucket
+            - |
+              /glue/nyctaxi/
+            - >
+              aws s3 cp
+              s3://aws-data-analytics-workshops/lake-formation-workshop/scripts/nyctaxi-csv-to-json.py
+              /tmp/
+            - 'aws s3 cp /tmp/nyctaxi-csv-to-json.py s3://'
+            - !Ref LFWorkshopBucket
+            - |
+              /glue/scripts/
+      Tags:
+        - Key: Name
+          Value: EC2-DB-Loader
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: ec91adb3-0b14-4335-a4ce-9521cb522c74
+  GlueCrawler:
+    Type: 'AWS::Glue::Crawler'
+    Properties:
+      DatabaseName: tpc
+      Description: AWS Glue Crawler to crawl parquet data
+      Name: TPC Crawler
+      Role: !GetAtt 
+        - GlueServiceRole
+        - Arn
+      Targets:
+        S3Targets:
+          - Path: !Join 
+              - ''
+              - - !Ref DataLakeBucket
+                - /tpcparquet/
+      SchemaChangePolicy:
+        UpdateBehavior: UPDATE_IN_DATABASE
+        DeleteBehavior: LOG
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 12eeb84b-9585-44b6-82fe-eb105d7bc1f1
+  AWSCloud9SSMAccessRole:
+    Type: 'AWS::IAM::Role'
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - cloud9.amazonaws.com
+                - ec2.amazonaws.com
+            Action:
+              - 'sts:AssumeRole'
+      Description: Service linked role for AWS Cloud9
+      Path: /service-role/
+      ManagedPolicyArns:
+        - 'arn:aws:iam::aws:policy/AWSCloud9SSMInstanceProfile'
+      RoleName: AWSCloud9SSMAccessRole
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 9baee89a-4b38-49c1-96f1-4d39b437f887
+  AWSCloud9SSMInstanceProfile:
+    Type: 'AWS::IAM::InstanceProfile'
+    Properties:
+      InstanceProfileName: AWSCloud9SSMInstanceProfile
+      Path: /cloud9/
+      Roles:
+        - Ref: AWSCloud9SSMAccessRole
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: b87ab17f-9b53-4982-b2a1-18292c183dd8
+  C9IDE:
+    Type: 'AWS::Cloud9::EnvironmentEC2'
+    DependsOn: AWSCloud9SSMAccessRole
+    Properties:
+      Name: Cloud9-IDE-For-EMR
+      Description: Cloud9 IDE to prepare the certs
+      AutomaticStopTimeMinutes: !FindInMap 
+        - Constants
+        - AutoHibernateTimeout
+        - Name
+      SubnetId: !Ref PrivateSubnet
+      InstanceType: !FindInMap 
+        - Constants
+        - EC2InstanceType
+        - Name
+      ConnectionType: CONNECT_SSM
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 2fc46e0c-f7bc-4d81-925f-6b3b46977c08
+  VPCEndpointSagemakerAPI:
+    Type: 'AWS::EC2::VPCEndpoint'
+    Properties:
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal: '*'
+            Action: '*'
+            Resource: '*'
+      VpcEndpointType: Interface
+      PrivateDnsEnabled: true
+      SubnetIds:
+        - !Ref PrivateSubnet
+      SecurityGroupIds:
+        - !Ref VPCEndpointSecurityGroup
+      ServiceName: !Sub 'com.amazonaws.${AWS::Region}.sagemaker.api'
+      VpcId: !Ref LakeFormationVPC
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 38ac701e-e209-4da1-9821-0a0fb8e9f97c
+  VPCEndpointSageMakerRuntime:
+    Type: 'AWS::EC2::VPCEndpoint'
+    Properties:
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal: '*'
+            Action: '*'
+            Resource: '*'
+      VpcEndpointType: Interface
+      PrivateDnsEnabled: true
+      SubnetIds:
+        - !Ref PrivateSubnet
+      SecurityGroupIds:
+        - !Ref VPCEndpointSecurityGroup
+      ServiceName: !Sub 'com.amazonaws.${AWS::Region}.sagemaker.runtime'
+      VpcId: !Ref LakeFormationVPC
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: db69fc15-6914-4211-b88c-37488003b356
+  VPCEndpointSTS:
+    Type: 'AWS::EC2::VPCEndpoint'
+    Properties:
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal: '*'
+            Action: '*'
+            Resource: '*'
+      VpcEndpointType: Interface
+      PrivateDnsEnabled: true
+      SubnetIds:
+        - !Ref PrivateSubnet
+      SecurityGroupIds:
+        - !Ref VPCEndpointSecurityGroup
+      ServiceName: !Sub 'com.amazonaws.${AWS::Region}.sts'
+      VpcId: !Ref LakeFormationVPC
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: df641406-8b9f-4e68-b479-0abcec8ca894
+  VPCEndpointCW:
+    Type: 'AWS::EC2::VPCEndpoint'
+    Properties:
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal: '*'
+            Action: '*'
+            Resource: '*'
+      VpcEndpointType: Interface
+      PrivateDnsEnabled: true
+      SubnetIds:
+        - !Ref PrivateSubnet
+      SecurityGroupIds:
+        - !Ref VPCEndpointSecurityGroup
+      ServiceName: !Sub 'com.amazonaws.${AWS::Region}.monitoring'
+      VpcId: !Ref LakeFormationVPC
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 044ec220-03fe-47a9-aa0e-3ca28f0e81a1
+  VPCEndpointCWL:
+    Type: 'AWS::EC2::VPCEndpoint'
+    Properties:
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal: '*'
+            Action: '*'
+            Resource: '*'
+      VpcEndpointType: Interface
+      PrivateDnsEnabled: true
+      SubnetIds:
+        - !Ref PrivateSubnet
+      SecurityGroupIds:
+        - !Ref VPCEndpointSecurityGroup
+      ServiceName: !Sub 'com.amazonaws.${AWS::Region}.logs'
+      VpcId: !Ref LakeFormationVPC
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: df1fd7c6-a097-4288-8777-6b4b51256d4c
+  VPCEndpointECR:
+    Type: 'AWS::EC2::VPCEndpoint'
+    Properties:
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal: '*'
+            Action: '*'
+            Resource: '*'
+      VpcEndpointType: Interface
+      PrivateDnsEnabled: true
+      SubnetIds:
+        - !Ref PrivateSubnet
+      SecurityGroupIds:
+        - !Ref VPCEndpointSecurityGroup
+      ServiceName: !Sub 'com.amazonaws.${AWS::Region}.ecr.dkr'
+      VpcId: !Ref LakeFormationVPC
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: ad353aef-c268-4ca9-824f-c70d169639b3
+  VPCEndpointECRAPI:
+    Type: 'AWS::EC2::VPCEndpoint'
+    Properties:
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal: '*'
+            Action: '*'
+            Resource: '*'
+      VpcEndpointType: Interface
+      PrivateDnsEnabled: true
+      SubnetIds:
+        - !Ref PrivateSubnet
+      SecurityGroupIds:
+        - !Ref VPCEndpointSecurityGroup
+      ServiceName: !Sub 'com.amazonaws.${AWS::Region}.ecr.api'
+      VpcId: !Ref LakeFormationVPC
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 1e25cd49-f96e-4e9c-af61-f9f7ed4db309
+  SageMakerInstanceSecurityGroup:
+    Type: 'AWS::EC2::SecurityGroup'
+    Properties:
+      GroupName: SageMaker-SecurityGroup
+      GroupDescription: Security group with no ingress rule
+      SecurityGroupEgress:
+        - IpProtocol: -1
+          FromPort: -1
+          ToPort: -1
+          CidrIp: 0.0.0.0/0
+      VpcId: !Ref LakeFormationVPC
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 7c81b63b-bac4-4dab-b44f-6ff742cfd7f8
+  SageMakerInstanceSecurityGroupIngress:
+    Type: 'AWS::EC2::SecurityGroupIngress'
+    Properties:
+      IpProtocol: '-1'
+      GroupId: !Ref SageMakerInstanceSecurityGroup
+      SourceSecurityGroupId: !Ref SageMakerInstanceSecurityGroup
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 9e9ffa66-1b3e-4dd7-b44a-03e51ed00f0f
+  VPCEndpointSecurityGroup:
+    Type: 'AWS::EC2::SecurityGroup'
+    Properties:
+      GroupDescription: Allow TLS for VPC Endpoint
+      SecurityGroupEgress:
+        - IpProtocol: -1
+          FromPort: -1
+          ToPort: -1
+          CidrIp: 0.0.0.0/0
+      VpcId: !Ref LakeFormationVPC
+      Tags:
+        - Key: Name
+          Value: !Sub '${AWS::StackName}-endpoint-security-group'
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 4cca1e12-dd91-44c7-8d4b-60596dd7de07
+  EndpointSecurityGroupIngress:
+    Type: 'AWS::EC2::SecurityGroupIngress'
+    Properties:
+      IpProtocol: '-1'
+      GroupId: !Ref VPCEndpointSecurityGroup
+      SourceSecurityGroupId: !Ref SageMakerInstanceSecurityGroup
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 65f141e4-661d-4319-a891-3c5be2ee9eb9
+Outputs:
+  LFDataLakeBucketName:
+    Description: Lake Formation Data Lake Bucket Name
+    Value: !Ref DataLakeBucket
+  LFWorkshopBucketName:
+    Description: Lake Formation Workshop Bucket Name
+    Value: !Ref LFWorkshopBucket
+  AthenaQueryResultLocation:
+    Description: Athena Query Result Location
+    Value: !Join 
+      - ''
+      - - 's3://'
+        - !Ref LFWorkshopBucket
+        - /athena-results/
+  MetadataLocation:
+    Description: Metadata Location
+    Value: !Join 
+      - ''
+      - - 's3://'
+        - !Ref LFWorkshopBucket
+        - /metadata
+  LFUsersCredentials:
+    Description: AWS Secrets Manager Secret Name for all workshop users credentials
+    Value: !Sub >-
+      https://${AWS::Region}.console.aws.amazon.com/secretsmanager/secret?name=${AWS::StackName}-lf-users-credentials
+  ADFSUsersCredentials:
+    Description: AWS Secrets Manager Secret Name for all ADFS users credentials
+    Value: !Sub >-
+      https://${AWS::Region}.console.aws.amazon.com/secretsmanager/secret?name=${AWS::StackName}-adfs-users-credentials
+  ConsoleIAMLoginUrl:
+    Description: Console IAM Login URL to try out different users
+    Value: !Join 
+      - ''
+      - - 'https://'
+        - !Ref 'AWS::AccountId'
+        - .signin.aws.amazon.com/console
